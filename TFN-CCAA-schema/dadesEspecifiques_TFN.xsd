@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.aoc.cat/tfn/ccaa" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aoc.cat/tfn/ccaa" elementFormDefault="qualified">
+	<xs:element name="peticioConsultaDadesTFN">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ccaa" type="tCcaa"/>
+				<xs:element name="numeroTitol" type="tNumeroTitol" minOccurs="0"/>
+				<xs:element name="dataConsulta" type="tData" minOccurs="0"/>
+				<xs:element name="dataNaixement" type="tData" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="respostaConsultaDadesTFN">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="peticioConsultaDadesTFN" minOccurs="0"/>
+				<xs:element name="resposta" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="titol">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ccaa" type="tCcaa"/>
+										<xs:element name="numeroTitol" type="tNumeroTitol"/>
+										<xs:element name="categoria">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="G"/>
+													<xs:enumeration value="E"/>
+													<xs:enumeration value="P"/>
+													<xs:enumeration value="S"/>
+													<xs:enumeration value="H"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="vigent" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="S"/>
+													<xs:enumeration value="N"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="dataExpedicio" type="tData" minOccurs="0"/>
+										<xs:element name="dataCaducitat" type="tData"/>
+										<xs:element name="numeroFills" type="xs:int"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="beneficiaris" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="beneficiari" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="resultat"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="beneficiari">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tipusDocumentacio" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="NIF"/>
+							<xs:enumeration value="DNI"/>
+							<xs:enumeration value="Pasaporte"/>
+							<xs:enumeration value="NIE"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="documentacio" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="14"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="dataNaixement" type="tData" minOccurs="0"/>
+				<xs:element name="nom" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="primerCognom" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="segonCognom" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="titular" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="S"/>
+							<xs:enumeration value="N"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tNumeroTitol">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tCcaa">
+		<xs:annotation>
+			<xs:documentation>
+			01 - ANDALUCÍA
+			02 - ARAGÓN
+			03 - PRINCIPADO DE ASTURIAS
+			04 - ISLAS BALEARES
+			05 - CANARIAS
+			06 - CANTABRIA
+			07 - CASTILLA y LEÓN
+			08 - CASTILLA-LA MANCHA
+			09 - CATALUNYA
+			10 - COMUNIDAD VALENCIANA
+			11 - EXTREMADURA
+			12 - GALICIA
+			13 - MADRID
+			14 - REGIÓN DE MURCIA
+			15 - NAVARRA
+			16 - PAÍS VASCO
+			17 - LA RIOJA
+			18 - CIUDAD DE CEUTA
+			19 - CIUDAD DE MELILLA			
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="01"/>
+			<xs:enumeration value="02"/>
+			<xs:enumeration value="03"/>
+			<xs:enumeration value="04"/>
+			<xs:enumeration value="05"/>
+			<xs:enumeration value="06"/>
+			<xs:enumeration value="07"/>
+			<xs:enumeration value="08"/>
+			<xs:enumeration value="09"/>
+			<xs:enumeration value="10"/>
+			<xs:enumeration value="11"/>
+			<xs:enumeration value="12"/>
+			<xs:enumeration value="13"/>
+			<xs:enumeration value="14"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="16"/>
+			<xs:enumeration value="17"/>
+			<xs:enumeration value="18"/>
+			<xs:enumeration value="19"/>
+			<!-- xs:enumeration value="09"/> -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tData">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="10"/>
+			<xs:maxLength value="10"/>
+			<xs:pattern value="([0][1-9]|[1,2][0-9]|[3][0,1])/([0][1-9]|[1][0-2])/[1-2][0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ======================================================= -->
+	<!-- Resultat                                               													 -->
+	<!-- ======================================================= -->
+	<xs:element name="resultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codiResultat" type="xs:string"/>
+				<xs:element name="descripcio" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
