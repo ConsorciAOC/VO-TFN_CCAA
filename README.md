@@ -7,8 +7,7 @@ Podreu trobar els XSD's del servei en aquest repositori sota el directori [/sche
 
 ### Informació general
 
-| **Títol:** | Via Oberta – TFN Títol de Família Nombrosa (CCAA). Document d’integració del servei
-|
+| **Títol:** | Via Oberta – TFN Títol de Família Nombrosa (CCAA). Document d’integració del servei|
 | --- | --- |
 | **Creat per:** | Àrea de Tecnologia - Projectes |
 | **A revisar per:** | Àrea de Tecnologia - Suport |
@@ -39,7 +38,7 @@ Aquest document detalla la missatgeria associada al servei de consulta de Títol
 Nombrosa de la resta de CCAA de l’Estat.
 
 <br/>Per poder realitzar la integració cal conèixer prèviament la següent documentació:
-• Document de Missatgeria Genèrica de la PCI del Consorci AOC.
+* Document de Missatgeria Genèrica de la PCI del Consorci AOC.
 
 
 
@@ -59,7 +58,7 @@ Les modalitats disposen de versió imprimible del resultat de la consulta en for
 ## 3 Missatgeria dels serveis<a name="3"></a>
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les modalitats de consum del producte.
 
->:warning: L’emissor de les dades requereix que s’informin les dades del funcionari que realitza la consulta. Així, cal informar els següents camps de l’element Funcionario del bloc de dades genèriques: <br/ /Peticion/Funcionario/NombreCompletoFuncionario, <br/> /Peticion/Funcionario/NifFuncionario, <br/>//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario  <br/>//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NifFuncionario
+>:warning: L’emissor de les dades requereix que s’informin les dades del funcionari que realitza la consulta. Així, cal informar els següents camps de l’element Funcionario del bloc de dades genèriques: <br/> /Peticion/Funcionario/NombreCompletoFuncionario, <br/> /Peticion/Funcionario/NifFuncionario, <br/>//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario  <br/>//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NifFuncionario
 
 
 ### 3.1 Consulta de títol de família nombrosa (TFN_CCAA) <a name="3.1"></a>
@@ -75,9 +74,10 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 <p align="center">
 <img align="center" src="img/peticioConsultaDadesTFN.png" />
 </p>
+
 | *Element* | *Descripció**|
 | --- | --- |
-|/peticioConsultaDadesTFN/ccaa |Codi de comunitat autònoma:<br/>01 - ANDALUCÍA<br/>02 - ARAGÓN<br/>03 - PRINCIPADO DE ASTURIAS<br/>04 - ISLAS BALEARES<br/>05 - CANARIAS<br/>06 - CANTABRIA<br/>07 - CASTILLA y LEÓN<br/>08 - CASTILLA-LA MANCHA<br/>09 - CATALUNYA<br/>10 - COMUNIDAD VALENCIANA<br/>11 - EXTREMADURA<br/>12 - GALICIA<br/>13 - MADRID<br/>14 - REGIÓN DE MURCIA<br/>15 - NAVARRA<br/>16 - PAÍS VASCO<br/>17 - LA RIOJA<br/>18 - CIUDAD DE CEUTA<br/>19 - CIUDAD DE MELILLA|
+|/peticioConsultaDadesTFN/ccaa | Codi de comunitat autònoma:<br/>01 - ANDALUCÍA<br/>02 - ARAGÓN<br/>03 - PRINCIPADO DE ASTURIAS<br/>04 - ISLAS BALEARES<br/>05 - CANARIAS<br/>06 - CANTABRIA<br/>07 - CASTILLA y LEÓN<br/>08 - CASTILLA-LA MANCHA<br/>09 - CATALUNYA<br/>10 - COMUNIDAD VALENCIANA<br/>11 - EXTREMADURA<br/>12 - GALICIA<br/>13 - MADRID<br/>14 -REGIÓN DE MURCIA<br/>15 - NAVARRA<br/>16 - PAÍS VASCO<br/>17 - LA RIOJA<br/>18 - CIUDAD DE CEUTA<br/>19 - CIUDAD DE MELILLA |
 | /peticioConsultaDadesTFN/numeroTitol  | Número de títol. |
 | /peticioConsultaDadesTFN/dataConsulta  | Data sobre la que es realitzarà la consulta (DD/MM/AAAA). |
 | /peticioConsultaDadesTFN/dataNaixement | Data de naixement del titular consultat(DD/MM/AAAA).|
