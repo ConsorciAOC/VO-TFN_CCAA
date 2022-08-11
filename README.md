@@ -32,13 +32,18 @@ Podreu trobar els XSD's del servei en aquest repositori sota el directori [/sche
 		* [3.1.1 Petició – dades genèriques](#3.1.1)
 		* [3.1.2 Petició – dades específiques](#3.1.2)
 		* [3.1.3 Resposta – dades específiques](#3.1.3)
+- [4. Joc de proves](#4)
 
 ## 1 Introducció <a name="1"></a>
 Aquest document detalla la missatgeria associada al servei de consulta de Títols de Família
 Nombrosa de la resta de CCAA de l’Estat.
 
 <br/>Per poder realitzar la integració cal conèixer prèviament la següent documentació:
-* Document de Missatgeria Genèrica de la PCI del Consorci AOC.
+
+- [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
+
+[PCI]:https://github.com/ConsorciAOC/PCI
+
 
 
 
@@ -111,3 +116,14 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 <p align="center">
 <img align="center" src="img/respostaConsultaDadesTFN.png" />
 </p>
+
+# 4 Joc de proves <a name="4"></a>
+
+https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
+
+L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-producció][proves] 
+
+[proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
+
+[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
